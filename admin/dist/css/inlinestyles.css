@@ -1,0 +1,68 @@
+/* BASIC CSS STYLING TO MAKE IT LOOK PRETTIER */
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.form-group{margin-bottom: 1rem;}
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+.ui-corner-all{margin-bottom:0px;}
+td, th { padding: 2px 4px; }
+table.ui-styled-table { border-collapse: collapse; }
+table.ui-styled-table td.ui-state-hover {
+font-weight: inherit;
+*font-weight: expression(this.parentNode.currentStyle['fontWeight']);
+}
+table.ui-styled-table th, table.ui-styled-table td { border-bottom-width: 0px !important; }
+
+table.ui-styled-table tbody tr:hover th,
+table.ui-styled-table tbody tr:hover td
+{ border-bottom-width: 1px !important; }
+
+table.ui-styled-table tbody tr:hover + tr th,
+table.ui-styled-table tbody tr:hover + tr td
+{ border-top-width: 0px !important; }
+table.ui-styled-table tbody tr.last-child th,
+table.ui-styled-table tbody tr.last-child td
+{ border-bottom-width: 1px !important; }
+table.ui-styled-table tbody tr:last-child th,
+table.ui-styled-table tbody tr:last-child td
+{ border-bottom-width: 1px !important; }
+#dialog-link {
+padding: .4em 1em .4em 20px;
+text-decoration: none;
+position: relative;
+}
+#dialog-link span.ui-icon {
+margin: 0 5px 0 0;
+position: absolute;
+left: .2em;
+top: 50%;
+margin-top: -8px;
+}
+
+.container {
+    width: 70%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.ui-accordion .ui-accordion-content{ padding:15px; height:auto !important;}
+form{ margin-bottom:0px;}
+input, select, textarea {width:99%; padding: .4em;}
+label{ position:relative; display:block; margin-bottom:7px;}
+p {padding:0px; margin:0px; margin-bottom:7px;}
+.stacked {margin-bottom:0px;}
+.stacked input{position:relative; display:block;}
+.inline{margin-bottom:0px;}
+.ui-dialog{position:relative !important;}
+.ui-spinner{width:100%;padding: 0px !important;}
+.ui-spinner-input{margin:0px; padding:0.5rem 0rem 0.5rem 0.5rem}
+.ui-front {
+    z-index: 9999;
+}

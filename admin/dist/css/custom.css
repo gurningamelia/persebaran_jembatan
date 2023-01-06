@@ -1,0 +1,59 @@
+/* Umum */
+.form-group{margin-bottom:5px;}
+.tab-custom-content {
+    border-top: none;
+    border-bottom: 1px solid #dee2e6;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+@media screen and (max-width: 767px){
+div.dt-buttons > .btn-group {
+	width:33.5%;
+}
+.dataTables_filter > label{
+	width:100%;
+	margin-bottom: unset;
+}
+.dataTables_filter > label > .form-control{
+	width: 100% !important;
+	margin-left: unset !important;	
+}
+}
+
+/* jQuery UI*/
+
+/* BASIC CSS STYLING TO MAKE IT LOOK PRETTIER */
+td, th { padding: 2px 4px; }
+table.ui-styled-table { border-collapse: collapse; }
+table.ui-styled-table td.ui-state-hover {
+font-weight: inherit;
+*font-weight: expression(this.parentNode.currentStyle['fontWeight']);
+}
+table.ui-styled-table th, table.ui-styled-table td { border-bottom-width: 0px !important; }
+
+table.ui-styled-table tbody tr:hover th,
+table.ui-styled-table tbody tr:hover td
+{ border-bottom-width: 1px !important; }
+
+table.ui-styled-table tbody tr:hover + tr th,
+table.ui-styled-table tbody tr:hover + tr td
+{ border-top-width: 0px !important; }
+table.ui-styled-table tbody tr.last-child th,
+table.ui-styled-table tbody tr.last-child td
+{ border-bottom-width: 1px !important; }
+table.ui-styled-table tbody tr:last-child th,
+table.ui-styled-table tbody tr:last-child td
+{ border-bottom-width: 1px !important; }
+#dialog-link {
+padding: .4em 1em .4em 20px;
+text-decoration: none;
+position: relative;
+}
+#dialog-link span.ui-icon {
+margin: 0 5px 0 0;
+position: absolute;
+left: .2em;
+top: 50%;
+margin-top: -8px;
+}

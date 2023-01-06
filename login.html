@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="assets/css/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/css/style.css" rel="stylesheet">
+
+    <title>DINAS PUPR</title>
+  </head>
+  <body>
+    <section class="form-02-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="_lk_de">
+                <form role="form" class="needs-validation" novalidate process="login" id="mightywebForm">
+<input type="hidden" value="data_user" name="table" />
+<input type="hidden" value="username" name="keylog" />
+<input type="hidden" value="admin" name="direction" />
+
+              <div class="form-03-main">
+                <div class="logo">
+                  <img src="logo.png">
+                </div>
+                <h6 class="text-center"><strong>LOGIN APLIKASI PERSEBARAN JEMBATAN</strong></h6>
+                <div class="form-group">
+                 <input type="text" name="valog" class="form-control _ge_de_ol" placeholder="Username" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control _ge_de_ol" placeholder="Password" autocomplete="off">
+
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="_btn_04">Login</button>
+                </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="admin/plugins/jquery/jquery.min.js"></script>
+<script src="admin/plugins/jquery-ui/jquery-ui.js"></script>
+<!-- Bootstrap 4 -->
+<script src="admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+var myLink = document.querySelector('a[href="#"]');
+myLink.addEventListener('click', function(e) {
+e.preventDefault();
+});</script>
+<script>
+$(document).ready(function(){
+	$('.needs-validation').on('submit', function(e) {
+	if (!this.checkValidity()) {
+		e.preventDefault();
+		e.stopPropagation();
+	}else{
+		e.preventDefault();
+		var form = $('#mightywebForm')[0];
+		var data = new FormData(form);
+		var acts = $('#mightywebForm').attr('process');
+		var adminurl = $('input[name="direction"]').val();
+		$.ajax({
+			type: "POST",
+			dataType: "JSON",
+			enctype: "multipart/form-data",
+			url: ""+adminurl+"/modules/actions.php?act="+acts,
+			data: data,
+			processData: false,
+			contentType: false,
+			cache: false,
+			timeout: 600000,
+			beforeSend: function(data){ 
+				$('button[type="submit"]').text('Tunggu...'); 
+				$(':input').attr("disabled",true); 
+				//console.log(data.keylog);
+			},
+			success: function(response){
+			console.log(response.status);
+				if(response.status == 'valid'){
+					setTimeout(function(){ 
+						window.location = ''+response.direction;+'';
+					}, 3000);
+					$(".login-box-msg").html("<span style='color:green'>"+response.message+"</span>");
+					$('button[type="submit"]').text('Berhasil'); 
+				}else if(response.status == 'invalid'){
+					$(".login-box-msg").html("<span style='color:red'>"+response.message+"</span>");
+					$('#card-front').effect('shake');
+					$(':input').attr("disabled",false); 
+					$('button[type="submit"]').text('Login');
+				}
+			}
+		});
+		
+		$(this).addClass('was-validated');
+	}
+	$(this).addClass('was-validated');
+	});
+});
+</script>
+  </body>
+</html>

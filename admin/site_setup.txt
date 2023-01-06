@@ -1,0 +1,25 @@
+{
+	"data": [
+		{
+			"company_name"	: "Dinas Pekerjaan Umum & Penataan Ruang Kota Palembang",
+			"company_alt"	: "DINAS PUPRo",
+			"address"		: "Jl. Slamet Riady, Lawang Kidul, Ilir Tim. II, Kota Palembang",
+			"app_name"		: "Aplikasi Persebaran Jembatan",
+			"title_tags"	: "-",
+			"description"	: "Aplikasi Persebaran Jembatan pada Dinas PUPR Berbasis Web Mobile",
+			"logo"			: "../logo.png",
+			"favicon"		: "../logo.png",
+			"copyright"		: "2022",
+			"created"		: "Amelia Debisafitri Al Fadilah Gurning",
+			"phone"			: "-",
+			"email"			: "-",
+			"openoffice"	: "-"
+		}
+	],
+
+	"settings": [
+		{
+			"loading"	    : "background  : 'rgba(244, 246, 249, 0.5)', image: '', fontawesome : 'fa fa-spinner fa-spin'"
+		}
+	]
+}
